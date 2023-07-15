@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interação com Formulários</title>
+    <title>Desafio PHP</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <section>
+    <main>
         <h1>Analisador de Número Real</h1>
-        <form action="cad.php" method="get">
-            <label for="numero">Número Real:</label>
-            <input type="number" step="any" name="numero" id="idnumero">
+        <form action="numero.php" method="post">
+            <label for="n">Número Real:</label>
+            <input type="number" name="n" id="n" step="0.001">
             <input type="submit" value="Analisar">
         </form>
-    </section>
+    </main>
 </body>
 </html>
