@@ -3,30 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Desafio PHP</title>
     <link rel="stylesheet" href="style.css">
+    <title>Desafio PHP</title>
 </head>
 <body>
     <?php 
-        $minimo = 1_380.60;
-        $salario = $_GET['sal'] ?? $minimo;
+        $numero = $_GET['num'] ?? 1;
     ?>
     <main>
-        <h1>Informe seu salário</h1>
-        <form action="<?=$_SERVER['PHP_SELF'] ?>" method="get">
-            <label for="sal">Salário (R$)</label>
-            <input type="number" name="sal" id="sal" value="<?=$salario?>" step="0.01">
-            <p>Considerando o salário mínimo de <strong>R$<?=number_format($minimo, 2, ",", ".")?></strong></p>
-            <input type="submit" value="Calcular">
+        <h1>Informe um número</h1>
+        <form action="<?=$_SERVER['PHP_SELF']?>" method="get">
+        <label for="sal">Número</label>
+        <input type="number" name="num" id="num" value="<?=$numero?>">
+        <input type="submit" value="Calcular Raízes">
         </form>
     </main>
     <section>
         <h2>Resultado Final</h2>
         <?php 
-            $tot = intdiv($salario, $minimo);
-            $dif = $salario % $minimo;
+        $rq = $numero ** (1/2);
+        $rc = $numero ** (1/3);
 
-            echo "<p>Quem recebe um salário de R\$". number_format($salario, 2, ",", ".") ." ganha <strong>$tot salários mínimos</strong> + R\$ ". number_format($dif, 2, ",", ".") ."</p>";
+        echo "<p>Analizando o <strong>numero $numero</strong>, temos:";
+        echo "<ul><li>A sua raiz quadrada é ". number_format($rq, 3, ",", ".") ."</li>";
+        echo "<li> a sua raiz cúbica é ". number_format($rc,  3, ",", ".") ."</li></ul>";
         ?>
     </section>
 </body>
