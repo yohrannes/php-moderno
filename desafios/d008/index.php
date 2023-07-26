@@ -26,7 +26,7 @@
             $tot = intdiv($salario, $minimo);
             $dif = $salario % $minimo;
 
-            echo "<p>Quem recebe um salário de R\$". number_format($salario, 2, ",", ".") ." ganha <strong>$tot salários mínimos</strong> + R\$ ". number_format($dif, 2, ",", ".") ." .</p>";
+            echo "<p>Quem recebe um salário de R\$". number_format($salario, 2, ",", ".") ." ganha <strong>$tot salários mínimos</strong> + R\$ ". number_format($dif, 2, ",", ".") ."</p>";
         ?>
     </section>
 </body>
