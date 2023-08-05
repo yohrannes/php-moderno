@@ -8,7 +8,7 @@
     <title>Desafio PHP</title>
 </head>
 <body>
-    <?php 
+    <?php
         $valor1 = $_GET['v1'] ?? '';
         $peso1 = $_GET['p1'] ?? '';
         $valor2 = $_GET['v2'] ?? '';
